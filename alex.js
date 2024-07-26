@@ -1,5 +1,6 @@
 const mainScript = () => {
   window.scrollTo(0, 0);
+  let timeShow=800;
   gsap.registerPlugin(ScrollTrigger);
   //Utils
   const parseRem = (input) => {
@@ -479,6 +480,12 @@ function getSessionCookie(name) {
 
 
   function globalScript() {
+    if ($('.global-ovelay').length>0){
+      setTimeout(()=>{
+    console.log($('.global-ovelay'))
+    $('.global-ovelay').addClass('none');
+      },timeShow)
+    }
     if ($('.hide-def-div').length > 0) {
       $('.hide-def-div').removeClass('hide-def-div')
     }
@@ -520,12 +527,12 @@ function getSessionCookie(name) {
         }
       });
       tl
-        .to(title.words, { yPercent: 0, stagger: .03, duration: .5, autoAlpha: 1, })
+        .to(title.words, { yPercent: 0, stagger: .03, duration: .5, autoAlpha: 1, delay:`${(timeShow + 400)/1000}`})
         .to(sub.words, { yPercent: 0, stagger: .015, duration: .3, autoAlpha: 1, }, '<=.2')
         .to('.home-hero .home-hero-btn', { y: 0, duration: .4, autoAlpha: 1, clearProps: 'all' }, '<=.2')
-        .to('.home-hero-bg img', { autoAlpha: 1, y: 0, duration: .6, clearProps: 'all' }, '.2')
-        .to(sublabel.words, { yPercent: 0, stagger: .02, duration: .4, autoAlpha: 1, }, '.2')
-        .to(subtxt.words, { yPercent: 0, stagger: .02, duration: .4, autoAlpha: 1, }, '<=.2')
+        .to('.home-hero-bg img', { autoAlpha: 1, y: 0, duration: .6, clearProps: 'all' , delay:`${(timeShow + 400)/1000}`}, '.2')
+        .to(sublabel.words, { yPercent: 0, stagger: .02, duration: .4, autoAlpha: 1, delay:`${(timeShow + 400)/1000}`}, '.2')
+        .to(subtxt.words, { yPercent: 0, stagger: .02, duration: .4, autoAlpha: 1,  }, '<=.2')
     }
     function homeVideoHandle() {
       let tl = gsap.timeline({
@@ -878,10 +885,10 @@ function getSessionCookie(name) {
         }
       });
       tl
-        .to(title.words, { yPercent: 0, duration: .6, autoAlpha: 1, ease: "power1.out", })
+        .to(title.words, { yPercent: 0, duration: .6, autoAlpha: 1, ease: "power1.out", delay:`${(timeShow + 400)/1000}` })
         .to(sub.words, { yPercent: 0, stagger: .02, duration: .3, autoAlpha: 1, ease: "power1.out", }, '<=.2')
         .to('.speaking-hero-content-wrap .btn', { y: 0, duration: .5, autoAlpha: 1, ease: "power1.out", }, '<=.2')
-        .to('.speaking-hero-bg img', { autoAlpha: 1, y: 0, duration: .6, clearProps: 'all' }, '.2')
+        .to('.speaking-hero-bg img', { autoAlpha: 1, y: 0, duration: .6, clearProps: 'all' , delay:`${(timeShow + 400)/1000}`}, '.2')
     }
     function speakingPresentation() {
       if ($(window).width() > 767) {
@@ -1159,10 +1166,10 @@ function getSessionCookie(name) {
       });
       
       tl
-        .to(title.words, { yPercent: 0, stagger: .04, duration: .6, opacity: 1, ease: "power1.out", })
+        .to(title.words, { yPercent: 0, stagger: .04, duration: .6, opacity: 1, ease: "power1.out",  delay:`${(timeShow + 400)/1000}`})
         .to(sub.words, { yPercent: 0, stagger: .02, duration: .3, opacity: 1, ease: "power1.out", }, '<=.2')
         .to('.about-hero-sub-inner .btn', { y: 0, duration: .5, opacity: 1, ease: "power1.out", }, '<=-.2')
-        .to('.about-hero-bg img', { autoAlpha: 1, y: 0, duration: .6, clearProps: 'all' }, '.2')
+        .to('.about-hero-bg img', { autoAlpha: 1, y: 0, duration: .6, clearProps: 'all'  ,delay:`${(timeShow + 400)/1000}`}, '.2')
     }
     function aboutJourney() {
       const title = new SplitType('.about-journey-title', { wordClass: 'split-word', types: 'words' });
@@ -1378,7 +1385,7 @@ function getSessionCookie(name) {
       });
 
       tl
-        .to(title.words, { yPercent: 0, duration: .6, autoAlpha: 1, ease: "power1.out" })
+        .to(title.words, { yPercent: 0, duration: .6, autoAlpha: 1, ease: "power1.out", delay:`${(timeShow + 400)/1000}` })
         .to([sub1.words, sub2.words], { yPercent: 0, stagger: .02, duration: .3, autoAlpha: 1, ease: "power1.out" }, '<=.2')
         .to('.contact-form-main', { autoAlpha: 1, y: 0, duration: .8, ease: 'power1.out' }, '<=0')
         .to('.contact-btn-more', { autoAlpha: 1, y: 0, duration: .6, ease: 'power1.out' }, '<=.3')
