@@ -527,11 +527,11 @@ function getSessionCookie(name) {
         }
       });
       tl
-        .to(title.words, { yPercent: 0, stagger: .03, duration: .5, autoAlpha: 1, delay:`${(timeShow + 400)/1000}`})
+        .to(title.words, { yPercent: 0, stagger: .03, duration: .5, autoAlpha: 1, delay:`${(timeShow + 200)/1000}`})
         .to(sub.words, { yPercent: 0, stagger: .015, duration: .3, autoAlpha: 1, }, '<=.2')
         .to('.home-hero .home-hero-btn', { y: 0, duration: .4, autoAlpha: 1, clearProps: 'all' }, '<=.2')
-        .to('.home-hero-bg img', { autoAlpha: 1, y: 0, duration: .6, clearProps: 'all' , delay:`${(timeShow + 400)/1000}`}, '.2')
-        .to(sublabel.words, { yPercent: 0, stagger: .02, duration: .4, autoAlpha: 1, delay:`${(timeShow + 400)/1000}`}, '.2')
+        .to('.home-hero-bg img', { autoAlpha: 1, y: 0, duration: .6, clearProps: 'all' , delay:`${(timeShow + 200)/1000}`}, '0')
+        .to(sublabel.words, { yPercent: 0, stagger: .02, duration: .4, autoAlpha: 1, delay:`${(timeShow + 200)/1000}`}, '.2')
         .to(subtxt.words, { yPercent: 0, stagger: .02, duration: .4, autoAlpha: 1,  }, '<=.2')
     }
     function homeVideoHandle() {
@@ -885,10 +885,10 @@ function getSessionCookie(name) {
         }
       });
       tl
-        .to(title.words, { yPercent: 0, duration: .6, autoAlpha: 1, ease: "power1.out", delay:`${(timeShow + 400)/1000}` })
+        .to(title.words, { yPercent: 0, duration: .6, autoAlpha: 1, ease: "power1.out", delay:`${(timeShow + 200)/1000}` })
         .to(sub.words, { yPercent: 0, stagger: .02, duration: .3, autoAlpha: 1, ease: "power1.out", }, '<=.2')
         .to('.speaking-hero-content-wrap .btn', { y: 0, duration: .5, autoAlpha: 1, ease: "power1.out", }, '<=.2')
-        .to('.speaking-hero-bg img', { autoAlpha: 1, y: 0, duration: .6, clearProps: 'all' , delay:`${(timeShow + 400)/1000}`}, '.2')
+        .to('.speaking-hero-bg img', { autoAlpha: 1, y: 0, duration: .8, clearProps: 'all' , delay:`${(timeShow + 200)/1000}`}, '0')
     }
     function speakingPresentation() {
       if ($(window).width() > 767) {
@@ -1166,10 +1166,10 @@ function getSessionCookie(name) {
       });
       
       tl
-        .to(title.words, { yPercent: 0, stagger: .04, duration: .6, opacity: 1, ease: "power1.out",  delay:`${(timeShow + 400)/1000}`})
-        .to(sub.words, { yPercent: 0, stagger: .02, duration: .3, opacity: 1, ease: "power1.out", }, '<=.2')
+        .to(title.words, { yPercent: 0, stagger: .04, duration: .6, opacity: 1, ease: "power1.out",  delay:`${(timeShow + 200)/1000}`})
+        .to(sub.words, { yPercent: 0, stagger: .02, duration: .5, opacity: 1, ease: "power1.out", }, '<=.2')
         .to('.about-hero-sub-inner .btn', { y: 0, duration: .5, opacity: 1, ease: "power1.out", }, '<=-.2')
-        .to('.about-hero-bg img', { autoAlpha: 1, y: 0, duration: .6, clearProps: 'all'  ,delay:`${(timeShow + 400)/1000}`}, '.2')
+        .to('.about-hero-bg img', { autoAlpha: 1, y: 0, duration: .6, clearProps: 'all'  ,delay:`${(timeShow +200)/1000}`}, '0')
     }
     function aboutJourney() {
       const title = new SplitType('.about-journey-title', { wordClass: 'split-word', types: 'words' });
@@ -1385,11 +1385,11 @@ function getSessionCookie(name) {
       });
 
       tl
-        .to(title.words, { yPercent: 0, duration: .6, autoAlpha: 1, ease: "power1.out", delay:`${(timeShow + 400)/1000}` })
+        .to(title.words, { yPercent: 0, duration: .6, autoAlpha: 1, ease: "power1.out", delay:`${(timeShow + 200)/1000}` })
         .to([sub1.words, sub2.words], { yPercent: 0, stagger: .02, duration: .3, autoAlpha: 1, ease: "power1.out" }, '<=.2')
         .to('.contact-form-main', { autoAlpha: 1, y: 0, duration: .8, ease: 'power1.out' }, '<=0')
         .to('.contact-btn-more', { autoAlpha: 1, y: 0, duration: .6, ease: 'power1.out' }, '<=.3')
-        .to('.contact-img-wrap', { autoAlpha: 1, y: 0, duration: .7, ease: 'power1.out' }, '<=.1')
+        .to('.contact-img-wrap', { autoAlpha: 1, y: 0, duration: .7, ease: 'power1.out' }, '<=0')
     }
 
     function actionForm() {
